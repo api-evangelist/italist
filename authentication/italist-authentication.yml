@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://italist.com/.well-known/openid-configuration
+note: >-
+  italist.com is a Shopify storefront. Buyer/customer authentication is handled by
+  Shopify's Customer Account API via OpenID Connect (issuer shopify.com). Agentic
+  commerce over the UCP/MCP endpoint requires buyer-approved payment; read-only
+  product/collection browsing requires no authentication.
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  pkce: S256
+  token_endpoint_auth_methods:
+  - client_secret_basic
+schemes:
+- name: ShopifyCustomerAccountOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://italist.com/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/70535250059
+  authorization_endpoint: https://shopify.com/authentication/70535250059/oauth/authorize
+  token_endpoint: https://shopify.com/authentication/70535250059/oauth/token
+  jwks_uri: https://shopify.com/authentication/70535250059/.well-known/jwks.json
+  grant_types:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  response_types:
+  - code
+  id_token_signing_alg: RS256
+  code_challenge_methods:
+  - S256
+unauthenticated_surfaces:
+- description: Read-only storefront product/collection JSON (no auth)
+  examples:
+  - GET /products/{handle}.json
+  - GET /collections/{handle}/products.json
+  - GET /collections/all
