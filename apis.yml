@@ -1,7 +1,16 @@
 aid: italist
 name: Italist
-description: Italist is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Italist is a luxury fashion e-commerce marketplace that ships designer apparel,
+  shoes, bags, and accessories from Italy directly to shoppers worldwide, offering
+  boutique inventory at Italian retail prices with duties and taxes handled at
+  checkout. Originally surfaced as a portfolio company of 500 Global and added to the
+  API Evangelist network as a stub, italist.com now runs as a Shopify-hosted
+  storefront that exposes a modern agent-native commerce surface: a published
+  Universal Commerce Protocol (UCP) merchant profile, a Model Context Protocol (MCP)
+  shopping endpoint, provider-published agents.md / llms.txt agent instructions, and
+  Shopify Customer Account API authentication over OpenID Connect. This profile was
+  enriched by the pipeline from live probes of the storefront's public agent surface.
 url: https://raw.githubusercontent.com/api-evangelist/italist/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +18,56 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://italist.com/cdn/shop/files/1200_x_400_-_1_fcc31d9b-a5bb-4f2a-a3a6-baa1712f67d1.jpg?v=1776357993
 tags:
 - Company
-apis: []
+- E-commerce
+- Retail
+- Fashion
+- Luxury
+- Marketplace
+- Shopify
+- Agentic Commerce
+- MCP
+apis:
+- name: Italist Commerce (UCP / MCP)
+  description: >-
+    Agent-native commerce surface for the Italist Shopify storefront — a Universal
+    Commerce Protocol (UCP) merchant profile and a Model Context Protocol (MCP)
+    shopping endpoint for catalog search, cart, and buyer-approved checkout, plus
+    unauthenticated read-only product and collection JSON.
+  humanURL: https://italist.com/agents.md
+  baseURL: https://italist.com
+  properties:
+  - type: MCPServer
+    url: mcp/italist-mcp.yml
+  - type: LLMsTxt
+    url: llms/italist-llms.txt
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Authentication
+    url: authentication/italist-authentication.yml
+  - type: OAuthScopes
+    url: scopes/italist-scopes.yml
+  - type: Conventions
+    url: conventions/italist-conventions.yml
+  - type: Conformance
+    url: conformance/italist-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +76,36 @@ maintainers:
 common:
 - type: Website
   url: https://italist.com
+- type: Support
+  url: https://italist.com/pages/contact
+- type: Blog
+  url: https://italist.com/blogs/news
+- type: SignUp
+  url: https://italist.com/account
+- type: TermsOfService
+  url: https://italist.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://italist.com/policies/privacy-policy
+- type: MCPServer
+  url: mcp/italist-mcp.yml
+- type: LLMsTxt
+  url: llms/italist-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: WellKnown
+  url: well-known/italist-well-known.yml
+- type: Authentication
+  url: authentication/italist-authentication.yml
+- type: OAuthScopes
+  url: scopes/italist-scopes.yml
+- type: Conventions
+  url: conventions/italist-conventions.yml
+- type: Conformance
+  url: conformance/italist-conformance.yml
+- type: DomainSecurity
+  url: security/italist-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

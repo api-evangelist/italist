@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of https://italist.com/.well-known/*
+host: https://italist.com
+note: >-
+  italist.com is a Shopify-hosted storefront. The OpenID/OAuth authorization-server
+  documents describe Shopify's Customer Account API (issuer shopify.com); the UCP
+  document describes the store's Universal Commerce Protocol (agentic commerce) profile.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: italist-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: italist-oauth-authorization-server.json
+- path: /.well-known/ucp
+  status: 200
+  file: italist-ucp.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

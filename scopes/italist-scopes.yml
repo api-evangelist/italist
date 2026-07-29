@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://italist.com/.well-known/openid-configuration
+docs: https://italist.com/.well-known/openid-configuration
+note: >-
+  OAuth/OIDC scopes advertised by the Shopify Customer Account authorization server
+  serving italist.com. These govern the buyer's customer-account session, including
+  the customer-account MCP surface.
+schemes:
+- name: ShopifyCustomerAccountOIDC
+  source: https://italist.com/.well-known/openid-configuration
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://shopify.com/authentication/70535250059/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/70535250059/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an ID token.
+  flows: [authorizationCode]
+- scope: email
+  description: Access to the customer's email address and verification status.
+  flows: [authorizationCode]
+- scope: customer-account-api:full
+  description: Full access to the Shopify Customer Account API for the signed-in buyer.
+  flows: [authorizationCode]
+- scope: customer-account-mcp-api:full
+  description: Full access to the Customer Account MCP API surface for the signed-in buyer.
+  flows: [authorizationCode]

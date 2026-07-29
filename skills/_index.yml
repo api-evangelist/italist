@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: https://italist.com/agents.md
+skills:
+- file: italist-agents.md
+  name: Italist agent instructions (provider-published)
+  api: mcp/italist-mcp.yml
+  description: >-
+    Provider-published AGENTS.md / agents.md describing how AI agents interact with
+    the Italist Shopify storefront via the Universal Commerce Protocol (UCP/MCP):
+    discover, search, cart, checkout, fulfill, complete (human-approved payment),
+    plus read-only product/collection browsing endpoints.
+  operations:
+  - search_catalog
+  - create_cart
+  - create_checkout
+  - update_checkout
+  - complete_checkout

@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://italist.com/agents.md
+note: >-
+  Cross-cutting agent/API conventions for the Italist Shopify storefront and its
+  UCP/MCP commerce endpoint. Derived from the provider's published agents.md and
+  live probes. No documented idempotency-key contract, so no Idempotency pointer is
+  emitted.
+authentication:
+  agentic_commerce: OIDC / OAuth2 (Shopify Customer Account API); buyer-approved payment
+  read_only: none required for storefront product/collection JSON
+transport:
+  mcp_endpoint: POST https://italist.com/api/ucp/mcp
+  content_type: application/json
+  discovery: GET https://italist.com/.well-known/ucp
+rate_limiting:
+  signaled: true
+  mechanism: HTTP 429 Too Many Requests (per IP on the MCP endpoint); agents must back off
+  source: https://italist.com/agents.md
+buyer_context:
+  parameters:
+  - context.address_country
+  - context.currency
+  note: pass for accurate pricing and availability
+read_only_endpoints:
+- GET /collections/all
+- GET /products/{handle}
+- GET /products/{handle}.json
+- GET /collections/{handle}
+- GET /collections/{handle}/products.json
+human_approval:
+  required_for: [checkout, payment, order placement]
+  note: no scripted/automated checkout; contemporaneous human approval required at payment
+cross_reference:
+  authentication: authentication/italist-authentication.yml
+  scopes: scopes/italist-scopes.yml
+  mcp: mcp/italist-mcp.yml
+  well_known: well-known/italist-well-known.yml

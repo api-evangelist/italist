@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://italist.com/agents.md
+discovery: https://italist.com/.well-known/ucp
+protocol: Universal Commerce Protocol (UCP)
+protocol_spec: https://ucp.dev
+supported_versions:
+- '2026-04-08'
+- '2026-01-23'
+server:
+  name: italist-ucp-shopping
+  transport: http
+  method: POST
+  content_type: application/json
+  url: https://italist.com/api/ucp/mcp
+  canonical_endpoint: https://r114wg-zn.myshopify.com/api/ucp/mcp
+  service: dev.ucp.shopping
+  schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+note: >-
+  Published UCP/MCP shopping endpoint for the Italist Shopify storefront. Live tools/list
+  requires a valid UCP agent-profile handshake (the anonymous JSON-RPC call returns
+  -32001 invalid_profile_url), so the tools below are captured verbatim from the
+  provider's own agents.md / llms.txt agent flow, not invented. Checkout completion
+  requires contemporaneous human buyer approval.
+tools:
+- name: search_catalog
+  description: Find products matching the buyer's intent.
+  source: https://italist.com/agents.md
+- name: create_cart
+  description: Add desired items to a cart.
+  source: https://italist.com/agents.md
+- name: create_checkout
+  description: Start the purchase flow.
+  source: https://italist.com/agents.md
+- name: update_checkout
+  description: Set shipping address and method.
+  source: https://italist.com/agents.md
+- name: complete_checkout
+  description: Finalize the purchase (buyer must approve payment).
+  source: https://italist.com/agents.md
