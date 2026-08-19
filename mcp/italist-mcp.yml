@@ -17,12 +17,10 @@ server:
   canonical_endpoint: https://r114wg-zn.myshopify.com/api/ucp/mcp
   service: dev.ucp.shopping
   schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
-note: >-
-  Published UCP/MCP shopping endpoint for the Italist Shopify storefront. Live tools/list
-  requires a valid UCP agent-profile handshake (the anonymous JSON-RPC call returns
-  -32001 invalid_profile_url), so the tools below are captured verbatim from the
-  provider's own agents.md / llms.txt agent flow, not invented. Checkout completion
-  requires contemporaneous human buyer approval.
+note: Published UCP/MCP shopping endpoint for the Italist Shopify storefront. Live tools/list requires
+  a valid UCP agent-profile handshake (the anonymous JSON-RPC call returns -32001 invalid_profile_url),
+  so the tools below are captured verbatim from the provider's own agents.md / llms.txt agent flow, not
+  invented. Checkout completion requires contemporaneous human buyer approval.
 tools:
 - name: search_catalog
   description: Find products matching the buyer's intent.
@@ -39,3 +37,11 @@ tools:
 - name: complete_checkout
   description: Finalize the purchase (buyer must approve payment).
   source: https://italist.com/agents.md
+deployment:
+  mode: remote
+  endpoint: https://italist.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
