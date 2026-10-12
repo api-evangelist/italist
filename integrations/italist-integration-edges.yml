@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/italist/integrations
+- https://n8n.io/integrations/italist/
+- https://composio.dev/toolkits/italist
+- https://monid.ai/tools/italist
+checked:
+- https://composio.dev/toolkits/italist
+- https://monid.ai/tools/italist
+- https://n8n.io/integrations/italist/
+- https://zapier.com/apps/italist/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
