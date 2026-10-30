@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Italist is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Italist is a luxury fashion e-commerce marketplace that ships designer apparel, shoes, bags, and accessories from Italy directly to shoppers worldwide, offering boutique inventory at Italian retail prices with duties and taxes handled at checkout. Originally surfaced as a portfolio company of 500 Global and added to the API Evangelist network as a stub, italist.com now runs as a Shopify-hosted storefront that exposes a modern agent-native commerce surface: a published Universal Commerce Protocol (UCP) merchant profile, a Model Context Protocol (MCP) shopping endpoint, provider-published agents.md / llms.txt agent instructions, and Shopify Customer Account API authentication over OpenID Connect. This profile was enriched by the pipeline from live probes of the storefront's public agent surface.
 
-Backed by: 500-global — https://italist.com
+**Areas:** Company · E-Commerce · Retail · Fashion · Luxury · Marketplace · Shopify · Agentic Commerce · MCP
+
+## Italist on APIs.io
+
+Everything profiled for Italist is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/italist/](https://apis.io/providers/italist/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Italist Commerce (UCP / MCP)](https://apis.io/apis/italist/italist-commerce-ucp-mcp/) — Agent-native commerce surface for the Italist Shopify storefront — a Universal Commerce Protocol (UCP) merchant profile and a Model Context Protocol (MCP)…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [italist-ucp-shopping](https://apis.io/servers/italist/italist-ucp-shopping/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Italist Authentication](https://apis.io/security/italist/italist-authentication/)
+- [Italist Domain Security](https://apis.io/security/italist/italist-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Italist Scopes](https://apis.io/scopes/italist/italist-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://italist.com)
+- [Sign up](https://italist.com/account)
+- [Support](https://italist.com/pages/contact)
+- [Blog](https://italist.com/blogs/news)
+- [Terms of service](https://italist.com/policies/terms-of-service)
+- [Privacy policy](https://italist.com/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 23.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/italist/](https://apis.io/providers/italist/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Italist: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/italist/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
